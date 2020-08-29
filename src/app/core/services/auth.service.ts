@@ -8,9 +8,9 @@ export class AuthService {
 
   constructor() { }
 
-  register() {
-    // TODO
-  }
+  register(credentials: {firstName: string, lastName:string, dateOfBirth: Date, emailAddress: string, password: string}): Observable<{accessToken: string}>{
+    return of({accessToken: 'test'});
+  };    
 
   login(credentials: {emailAddress: string, password: string}): Observable<{accessToken: string}> {
     return of({ accessToken: 'test' });
