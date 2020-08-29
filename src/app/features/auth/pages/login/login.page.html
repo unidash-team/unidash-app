@@ -15,8 +15,10 @@
       <ion-input formControlName="password" type="password"></ion-input>
     </ion-item>
 
-    <ion-button type="submit" [disabled]="form.invalid">
+    <ion-button type="submit" [disabled]="form.invalid" expand="block">
       Anmelden
     </ion-button>
+
+    <ion-button routerLink="register" color="light" expand="block">Noch keinen Account? Registrieren</ion-button>
   </form>
 </ion-content>
