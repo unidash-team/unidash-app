@@ -1,5 +1,4 @@
-import { NullTemplateVisitor } from '@angular/compiler';
-import { createReducer, on, State } from '@ngrx/store';
+import { createReducer, on } from '@ngrx/store';
 
 import { RegisterPageActions, AuthApiActions } from '../actions';
 
@@ -25,4 +24,4 @@ export const reducer = createReducer(initialState,
   on(AuthApiActions.registerFailure, (state, { error }) => ({
     ...state, error: error, loading: false
   }))
-)
+);

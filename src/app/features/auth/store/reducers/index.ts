@@ -1,4 +1,4 @@
-import { Action, combineReducers, State } from '@ngrx/store';
+import { Action, combineReducers } from '@ngrx/store';
 
 import * as fromLoginPage from './login-page.reducer';
 import * as fromRegisterPage from './login-page.reducer';
