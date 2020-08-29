@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <form [formGroup]="form" (submit)="handleForm()">
+  <form [formGroup]="form" (ngSubmit)="handleForm()">
     <ion-item>
       <ion-label position="floating">Vorname</ion-label>
       <ion-input formControlName="firstName"></ion-input>
@@ -24,11 +24,11 @@
     </ion-item>
     <ion-item>
       <ion-label position="floating">Passwort</ion-label>
-      <ion-input formControlName="password"></ion-input>
+      <ion-input formControlName="password" type="password"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Passwort wiederholen</ion-label>
-      <ion-input formControlName="passwordVerification"></ion-input>
+      <ion-input formControlName="passwordVerification" type="password"></ion-input>
     </ion-item>
   
     <ion-item>
