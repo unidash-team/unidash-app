@@ -1,9 +1,44 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>auth</ion-title>
+    <ion-title>Registrieren</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <form [formGroup]="form" (submit)="handleForm()">
+    <ion-item>
+      <ion-label position="floating">Vorname</ion-label>
+      <ion-input formControlName="firstName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nachname</ion-label>
+      <ion-input formControlName="lastName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Geburtsdatum</ion-label>
+      <ion-datetime displayFormat="MM DD YY" placeholder="Select Date" formControlName="dateOfBirth"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">E-Mail Adresse</ion-label>
+      <ion-input formControlName="emailAddress"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Passwort</ion-label>
+      <ion-input formControlName="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Passwort wiederholen</ion-label>
+      <ion-input formControlName="passwordVerification"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Ich habe die ... gelesen und nehme sie zur Kenntnis</ion-label>
+      <ion-checkbox formControlName="acceptTerms"></ion-checkbox>
+    </ion-item>
+  
+    <ion-button type="submit"
+      [disabled]="form.invalid">
+      Registrieren
+    </ion-button>
+  </form>
 </ion-content>
