@@ -22,7 +22,7 @@ npm-debug.log*
 /.sass-cache
 /.sourcemaps
 /.versions
-/.vscode
+/.vscode/*.code-snippets
 /coverage
 /dist
 /node_modules
