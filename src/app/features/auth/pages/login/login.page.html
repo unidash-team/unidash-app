@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <form [formGroup]="form" (ngSubmit)="handleForm()">
+  <form [formGroup]="form" (ngSubmit)="handleForm(form.value)">
     <ion-item>
       <ion-label position="floating">E-Mail Adresse</ion-label>
       <ion-input formControlName="emailAddress" type="email"></ion-input>
@@ -15,7 +15,9 @@
       <ion-input formControlName="password" type="password"></ion-input>
     </ion-item>
 
-    <ion-button type="submit" [disabled]="form.invalid" expand="block">
+    <ion-button type="submit"
+      [disabled]="form.invalid"
+      expand="block">
       Anmelden
     </ion-button>
 

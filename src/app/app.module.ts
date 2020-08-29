@@ -18,6 +18,7 @@ import { EffectsModule } from '@ngrx/effects';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    
     StoreModule.forRoot({}, {}),
     EffectsModule.forRoot([])
   ],

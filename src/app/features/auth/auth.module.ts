@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginPage } from './pages/login/login.page';
 import { RegisterPage } from './pages/register/register.page';
 import { IonicModule } from '@ionic/angular';
+import { AuthStoreModule } from './store/auth-store.module';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { IonicModule } from '@ionic/angular';
   imports: [
     CommonModule,
     AuthRoutingModule,
+    AuthStoreModule,
 
     FormsModule,
     ReactiveFormsModule,

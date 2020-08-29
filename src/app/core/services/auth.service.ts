@@ -13,7 +13,7 @@ export class AuthService {
   }
 
   login(credentials: {emailAddress: string, password: string}): Observable<{accessToken: string}> {
-    return of({accessToken: 'test'});
+    return of({ accessToken: 'test' });
   }
 
   signOut() {
